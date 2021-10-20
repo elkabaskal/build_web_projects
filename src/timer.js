@@ -16,6 +16,8 @@ function timerInt() {
             if (counter <= 5) {
                 var audio = new Audio("peep.mp3");
                 audio.play();
+
+
                 /*  var sound = new Howl({
                      src: ['sound.mp3']
                  });
