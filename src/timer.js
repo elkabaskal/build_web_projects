@@ -1,5 +1,9 @@
 export const timer = document.getElementById('btn__timer-start').addEventListener('click', () => timerInt());
 
+//Так подключить не получилось. 
+//import "https://raw.githubusercontent.com/goldfire/howler.js/master/dist/howler.core.min.js"; 
+//import Howler from "https://raw.githubusercontent.com/goldfire/howler.js/master/dist/howler.core.min.js"; 
+
 function timerInt() {
 
     let counter = +document.getElementById("number").value;
@@ -14,13 +18,15 @@ function timerInt() {
             timerBlock.textContent = counter;
             counter--;
             if (counter <= 5) {
-                var audio = new Audio("peep.mp3");
+                var audio = new Audio("./media/peep.mp3");
                 audio.play();
+
                 /*  var sound = new Howl({
                      src: ['sound.mp3']
                  });
 
                  sound.play(); */
+                //Выдает ошибку Howl is not not defined
             }
         }
     }, 1000);
